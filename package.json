@@ -1,0 +1,14 @@
+{
+  "name": "mynotes",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "bin": "./app.js",
+  "dependencies": {
+    "express": "3.5.0",
+    "jade": "*",
+    "mongoose": "^4.12.1"
+  }
+}

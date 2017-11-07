@@ -1,0 +1,74 @@
+body{
+	background: #fcf 100% 0 url('1.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.container{
+	width: 50vw;
+	margin: auto;
+	border: 3px solid blue;
+	border-radius: 30px;
+	background: #fdf;
+	box-shadow: 3px 3px 2px;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+input, textarea, button{
+	display: block;
+	margin: 5px auto;
+}
+.notes{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	width: 80vw;
+	margin: auto;
+	transition: 5s ease-out;
+}
+.note{
+	width: 20vw;
+	border: 2px solid blue;
+	border-radius: 20px;
+	width: 30%;
+	margin: 10px;
+	background: #ccf;
+	opacity: 0.8;
+	box-shadow: 3px 3px 2px;
+	transition: 5s ease-out;
+}
+.note>h3, p{
+	margin: 5px;
+}
+h3{
+	text-align: center;
+}
+.hidden{
+	display: none;
+}
+#nameValid{
+	position: relative;
+	left: 42%;
+	bottom: 20%; 
+}
+label{
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+.color{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin: 4px;
+	/*border-radius: 3px;*/
+	box-sizing: border-box;
+}
+.color:hover{
+	outline: 2px solid lightblue;
+}
+#hiddenButton{
+	display: none;
+}

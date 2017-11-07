@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	a(style="margin-left: 90%", href='/register') Регистрация
+	h1 My Note Application
+	h1= title
+	form(method='post')
+		input(name='username', placeholder='username')
+		input(name='password', type='password', placeholder='password')
+		input(type='submit', value='Вход')
+		

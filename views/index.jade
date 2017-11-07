@@ -1,0 +1,26 @@
+extends layout
+
+block content
+	a(style="margin-left: 90%", href='/logout') Выход
+	h2= title
+	div.container
+		h1 Ваша новая заметка
+		form(method='post')
+			input(name='title', placeholder='Title')
+			textarea(name='text', type='text', placeholder='MyNote', cols='80', rows='5')
+			- for(var i = 0; i < 25; i++){
+				div.color(onclick = 'return redToggle(event)')
+			- }
+			input(type='button', onclick="postNote()", value='Добавить')
+	div.notes
+		if data
+			each note in data
+				div.note(style='background: #{note.color}')
+					h3= note.title
+					p= note.text
+					input(type='button', onclick='saveEditNote(this)', value='Сохранить', id='hiddenButton')
+					- var options = {year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric'};
+					p= 'Дата создания: ' + note.created.toLocaleString("en-US", options)
+					p.hidden= note._id
+					input(type='button', onclick='deleteNote(this)', value='удалить')
+					input(type='button', onclick='editNote(this)', value='редактировать')
